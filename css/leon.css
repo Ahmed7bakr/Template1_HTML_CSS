@@ -140,6 +140,33 @@ body{
     border-bottom: 1px solid #ddd;
 }
 /* end header  */
+/* start components  */
+.special-header {
+    color: #ebeced;
+    font-size: 100px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -3px;
+    margin: 0;
+}
+
+.special-header + p{
+    margin: -30px 0 0 ;
+    font-size: 20px;
+    text-align: center;
+    color: #797979;
+}
+
+@media (max-width:767px){
+    .special-header{
+        font-size: 60px;
+    }
+    .special-header + p{
+        margin-top: -20px;
+    }
+}
+
+/* end components  */
 
 /* start landing section  */
 
@@ -215,3 +242,13 @@ body{
 
 }
 /* end features  */
+
+/* start services */
+
+.services{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+
+/* end services */
