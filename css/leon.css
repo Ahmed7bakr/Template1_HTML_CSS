@@ -3,6 +3,8 @@
 :root{
     --main-color:#10cab7;
     --secondary-color:#2c4755;
+    --section-padding:60px;
+    --section-background:#f6f6f6;
 }
 
 /* start variables */
@@ -208,9 +210,9 @@ body{
 /* start features  */
 
 .features{
-    padding-top: 60px;
-    padding-bottom: 60px;
-    background-color: #f6f6f6;
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: var(--section-background);
 }
 
 .features .container {
@@ -247,8 +249,8 @@ body{
 /* start services */
 
 .services{
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
 }
 
 .services .services-content{
@@ -322,3 +324,98 @@ body{
 }
 
 /* end services */
+
+/* start portofolio */
+
+.portofolio{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: var(--section-background);
+}
+
+.portofolio .portofolio-content{
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-gap:30px;
+    margin-top: 80px;
+}
+
+.portofolio .portofolio-content .card{
+
+    background-color: white;
+
+}
+
+.portofolio .portofolio-content .card img{
+
+    max-width: 100%;
+}
+
+.portofolio .portofolio-content .card .info{
+    padding: 20px;
+}
+
+.portofolio .portofolio-content .card .info h3{
+
+    margin: 0;
+
+}
+
+.portofolio .portofolio-content .card .info p{
+
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* end  portofolio */
+
+/* start about */
+.about{
+    padding-top: var(--section-padding);
+    
+    padding-bottom: calc(var(--section-padding)+60px);
+}
+
+.about-content{
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.about .about-content .image{
+    position: relative;
+    width: 250px;
+    height: 375px;
+}
+
+.about .about-content .image::before{
+    content: "";
+    position: absolute;
+    background-color: #ebeced;
+    width: 100px;
+    height: calc(100% + 80px);
+    top: -40px;
+    left: -20px;
+    z-index: -1;
+}
+
+.about .about-content .image::after{
+    content: "";
+    top: -40px;
+    position: absolute;
+    width: 120px;
+    height: 300px;
+    border-left: 80px solid var(--main-color);
+    border-bottom: 80px solid var(--main-color);
+    z-index: -1;
+    right: -150px;
+}
+
+.about .about-content .image img{
+    max-width: 100%;
+}
+
+/* end about */
